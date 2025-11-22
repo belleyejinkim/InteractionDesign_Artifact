@@ -68,15 +68,15 @@ Wolf와 Wolfeater가 나타나지 않도록 하였습니다.
 ### 7. 먹은 열매 이미지가 우측 상단에 보여지게 수정 FRUIT_ICON_UI_SETUP_GUIDE.md
 backpack에 열매가 있으면(0이 아니면) 보여지는 방식
 
-7.1. BushFruits.cs 수정: GetFruitVariant() 메서드 추가: 부시의 열매 타입을 반환
-7.2. PlayerBackpack.cs 수정: 열매 타입 저장
+**7.1. BushFruits.cs 수정**: GetFruitVariant() 메서드 추가: 부시의 열매 타입을 반환
+**7.2. PlayerBackpack.cs 수정**: 열매 타입 저장
 - AddFruits() 메서드에 BushVariant fruitType 파라미터 추가
 - currentFruitType 필드 추가: 현재 가진 열매 타입 저장
 - TakeFruits() 호출 시 currentFruitType도 초기화
-7.3.PlayerHarvest.cs - 열매를 수확할 때 부시의 열매 타입도 함께 전달
-7.4. FruitIconUI.cs - 열매 종류별 이미지 표시
+**7.3.PlayerHarvest.cs 수정**: 열매를 수확할 때 부시의 열매 타입도 함께 전달
+**7.4. FruitIconUI.cs 수정**: 열매 종류별 이미지 표시
 - fruitSprites 배열 추가: Green, Cyan, Yellow 순서로 3개의 열매 이미지
-7.4. 에디터 설정
+**7.4. 에디터 설정**
 - Assets/Scripts/UI/FruitIconUI.cs 
 - Assets > Scenes > level 을 선택하고 Hierarchy > Canvas에서 Image 생성(UI > Image)하고 이름을 FruitIcon으로 변경
 - FruitIcon > Rect Transform에서 위치 정해주고, Image > Raycast Target 체크 해제
@@ -87,5 +87,8 @@ backpack에 열매가 있으면(0이 아니면) 보여지는 방식
 
 
 ### 8. Artifact Health 글씨를 Earth Health로 변경
-Assets/LocalizationStrings/artifactHealth.asset 파일에서 ‘Artifact Health’를 ‘Earth Health’로 변경
-Assets/Scenes/level.unity을 선택하고 Hierarchy > Canvas > ArtifactTxt의 Inspectordptj Text를 ‘Earth Health’로 변경
+- Assets/LocalizationStrings/artifactHealth.asset 파일에서 ‘Artifact Health’를 ‘Earth Health’로 변경
+- Assets/Scenes/level.unity을 선택하고 Hierarchy > Canvas > ArtifactTxt의 Inspectordptj Text를 ‘Earth Health’로 변경
+
+
+
