@@ -68,7 +68,7 @@ Wolf와 Wolfeater가 나타나지 않도록 하였습니다.
 ### 7. 먹은 열매 이미지가 우측 상단에 보여지게 수정 FRUIT_ICON_UI_SETUP_GUIDE.md
 backpack에 열매가 있으면(0이 아니면) 보여지는 방식
 
-**7.1. BushFruits.cs 수정**: GetFruitVariant() 메서드 추가: 부시의 열매 타입을 반환
+**7.1. BushFruits.cs 수정**: GetFruitVariant() 메서드 추가: 부시의 열매 타입을 반환</br>
 **7.2. PlayerBackpack.cs 수정**: 열매 타입 저장
 - AddFruits() 메서드에 BushVariant fruitType 파라미터 추가
 - currentFruitType 필드 추가: 현재 가진 열매 타입 저장
