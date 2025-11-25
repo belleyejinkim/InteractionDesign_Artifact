@@ -11,6 +11,9 @@ public class HealthWarningUI : MonoBehaviour
     [SerializeField] Artifact artifact;
     [SerializeField] Image warningImage;
     [SerializeField] Text warningText;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip warningClip;
+    [SerializeField, Range(0f, 2f)] float warningVolume = 1f;
     
     [SerializeField] int warningHealthThreshold = 30;
     [SerializeField] float displayDuration = 2f;
@@ -20,6 +23,24 @@ public class HealthWarningUI : MonoBehaviour
     
     void Start()
     {
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+            
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.playOnAwake = false;
+                audioSource.loop = false;
+                audioSource.spatialBlend = 0f; // force 2D so it is always audible
+            audioSource.volume = warningVolume;
+            }
+        else
+        {
+            audioSource.volume = warningVolume;
+        }
+        }
+        
         // Start with UI hidden
         if (warningImage != null)
             warningImage.gameObject.SetActive(false);
@@ -49,6 +70,8 @@ public class HealthWarningUI : MonoBehaviour
             warningText.text = "열심히 해보세요";
         }
         
+        PlayWarningSound();
+        
         // Hide after displayDuration seconds
         if (hideCoroutine != null)
             StopCoroutine(hideCoroutine);
@@ -70,5 +93,19 @@ public class HealthWarningUI : MonoBehaviour
     public void ResetWarning()
     {
         warningShown = false;
+    }
+    
+    void PlayWarningSound()
+    {
+        if (warningClip == null)
+            return;
+        
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(warningClip, warningVolume);
+            return;
+        }
+        
+        AudioSource.PlayClipAtPoint(warningClip, transform.position);
     }
 }
