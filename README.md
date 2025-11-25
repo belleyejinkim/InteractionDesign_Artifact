@@ -1,3 +1,10 @@
+# 주요 변경사항 요약 (2025.11.26 by 예진)
+- 오디오(명주쌤 한숨소리 / CHOI_sound.wav) 추가 (Warning > Inspector에서 Audio Source Component 추가, Health Warning UI의 Warning Clip에 오디오클립 추가) - 11/26
+- 오디오(이상원교수님 목소리 / OH_sound.wav) 추가 (Cheers > Inspector에서 Audio Source Component 추가, Health Cheers UI의 Warning Clip에 오디오클립 추가)  - 11/26
+
+# 주요 변경사항 요약 (2025.11.25 by 예진)
+- 배경의 연세맵 변경
+
 # 주요 변경사항 요약 (2025.11.22 by 예진)
 
 
@@ -41,7 +48,7 @@ Wolf와 Wolfeater가 나타나지 않도록 하였습니다.
 - Warning 하위 항목으로 Image (UI > Image) 생성 - 우측 Inspector 패널에서 Source Image에 bad_result.png 추가
 - Warning 하위 항목으로 Text (UI > Text) 생성하고 글자 위치, 크기 조정
 - Warning > Inspector에서 Health Warning UI 컴포넌트 추가하고, Artifact, Warning Image, Warning Text
-- 오디오(명주쌤 한숨소리 / CHOI_sound.wav) 추가 (Warning > Inspector에서 Audio Source Component 추가, Health Warning UI의 Warning Clip에 오디오클립 추가) - 11/26
+
 
 
 
@@ -55,7 +62,7 @@ Wolf와 Wolfeater가 나타나지 않도록 하였습니다.
 - Cheers 하위 항목으로 Image (UI > Image) 생성 - 우측 Inspector 패널에서 Source Image에 good_result.png 추가
 - Cheers 하위 항목으로 Text (UI > Text) 생성하고 글자 위치, 크기 조정
 - Cheers > Inspector에서 Health Warning UI 컴포넌트 추가하고, Artifact, Warning Image, Warning Text 설정
-- 오디오(이상원교수님 목소리 / OH_sound.wav) 추가 (Cheers > Inspector에서 Audio Source Component 추가, Health Cheers UI의 Warning Clip에 오디오클립 추가)  - 11/26
+
 
 
 
