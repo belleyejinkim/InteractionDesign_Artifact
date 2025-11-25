@@ -33,14 +33,17 @@ Wolf와 Wolfeater가 나타나지 않도록 하였습니다.
 
 
 
-## 3. health가 32->30로 될 때, 최명주 선생님 이미지 팝업 (HEALTH_WARNING_SETUP_GUIDE.md)
+## 3. health가 32->30로 될 때, 최명주 선생님 이미지 팝업 + 음악재생 (HEALTH_WARNING_SETUP_GUIDE.md)
 32->30으로 떨어졌을 때만 팝업이 뜨고, 28->30이 될 때는 뜨지 않게 하였습니다.
 - Assets/Scripts/UI/HealthWarningUI.cs 파일 생성
 - Assets > Sprites > ArtPass 2 하위에 최명주 선생님 이미지(bad_result.png) 추가
 - Assets > Scenes > level 을 선택하고 Hierarchy > Canvas에 빈 GameObject 생성 (이름은 Warning으로 설정함)
 - Warning 하위 항목으로 Image (UI > Image) 생성 - 우측 Inspector 패널에서 Source Image에 bad_result.png 추가
 - Warning 하위 항목으로 Text (UI > Text) 생성하고 글자 위치, 크기 조정
-- Warning > Inspector에서 Health Warning UI 컴포넌트 추가하고, Artifact, Warning Image, Warning Text 설정
+- Warning > Inspector에서 Health Warning UI 컴포넌트 추가하고, Artifact, Warning Image, Warning Text
+- 오디오(명주쌤 한숨소리 / CHOI_sound.wav) 추가 (Warning > Inspector에서 Audio Source Component 추가, Health Warning UI의 Warning Clip에 오디오클립 추가) - 11/26
+
+
 
 
 ### 4. health가 88->90로 될 때, 이상원 교수님 이미지 팝업 (HEALTH_CONGRATULATIONS_SETUP_GUIDE.md)
@@ -52,6 +55,8 @@ Wolf와 Wolfeater가 나타나지 않도록 하였습니다.
 - Cheers 하위 항목으로 Image (UI > Image) 생성 - 우측 Inspector 패널에서 Source Image에 good_result.png 추가
 - Cheers 하위 항목으로 Text (UI > Text) 생성하고 글자 위치, 크기 조정
 - Cheers > Inspector에서 Health Warning UI 컴포넌트 추가하고, Artifact, Warning Image, Warning Text 설정
+- 오디오(이상원교수님 목소리 / OH_sound.wav) 추가 (Cheers > Inspector에서 Audio Source Component 추가, Health Cheers UI의 Warning Clip에 오디오클립 추가)  - 11/26
+
 
 
 
